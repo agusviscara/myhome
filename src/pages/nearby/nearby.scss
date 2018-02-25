@@ -1,0 +1,23 @@
+page-nearby {
+    #map {
+        width: 100%;
+        height: 14em;
+        border-bottom: 1px solid #dedede;
+    }
+    ion-label {
+        white-space: unset;
+        h3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 1.2em;
+        }
+        p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+}

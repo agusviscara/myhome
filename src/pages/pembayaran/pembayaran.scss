@@ -1,0 +1,29 @@
+.ios, .md {
+    page-pembayaran {
+    .star-icon {
+        font-size: 1.5rem!important;
+    }
+    .kategori {
+        margin-top: -10px;
+        margin-bottom: 0px;
+    }
+    .new-address {
+        border-top: 1px solid #dedede;font-size:1.2em;
+    }
+    .list-md {
+        margin: -1px 0 0px;
+    }
+    button {
+        align-items: baseline;
+    }
+    .bank-logo ion-col img {
+        padding: 5px;
+    }
+    .no-margin {
+        margin-bottom: -28px;
+    }
+    .list-md .item-input:last-child, .list-ios .item-input:last-child {
+        border-bottom: 1px solid #ffffff;
+    }
+}
+}

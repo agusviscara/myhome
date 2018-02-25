@@ -1,0 +1,84 @@
+page-dashboard {
+    .sliderhome {
+        height: 150px;
+    }
+    .scroll-content {
+        padding: 0px!important;
+    }
+    h4:first-child {
+        margin-top: 0.4em!important;
+    }
+    .content-md,
+    .content-ios {
+        background-color: #efefef;
+    }
+    .button-ios {
+        height: 2em;
+    }
+    .button-md,
+    .button-ios {
+        padding: 0 0.4em;
+    }
+    ion-card {
+        position: relative;
+    }
+    .card-title {
+        position: absolute;
+        top: 68%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        text-align: left;
+        padding: 0px 10px;
+    }
+    .card-title p {
+        color: #fff;
+    }
+    .line-text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 1.2em;
+    }
+    .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+    
+    @media (min-width: 318px) and (max-width: 322px) {
+        .card-row {
+            width: 6.8em;
+        }
+        .card-title {
+            top: 60%;
+        }
+    }
+    @media (min-width: 358px) and (max-width: 362px) {
+        .card-row {
+            width: 8em;
+        }
+    }
+    @media (min-width: 373px) and (max-width: 377px) {
+        .card-row {
+            width: 8em;
+        }
+    }
+    @media (min-width: 382px) and (max-width: 386px) {
+        .card-row {
+            width: 8em;
+        }
+    }
+    @media (min-width: 408px) and (max-width: 416px) {
+        .card-row {
+            width: 9em;
+        }
+    }
+    .row-slider {
+      margin-top: -1em;
+    }
+}

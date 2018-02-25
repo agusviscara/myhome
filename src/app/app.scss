@@ -1,0 +1,138 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.eye {
+    margin-top: 1.4em!important;
+    margin-left: 12px!important;
+    width: 0.2em;
+    z-index: 999;
+}
+
+.eye>.button-inner {
+    margin-left: 2.6em;
+}
+
+.list-ios>.item-block:first-child {
+    border-top: 0.55px solid #ffffff;
+}
+
+.button-md-secondary,
+.button-ios-secondary {
+    color: #fff;
+}
+
+.tabs-ios-primary .tab-button[aria-selected=true] {
+    border-bottom: 3px solid #fdd835;
+}
+
+.tabs-md-primary .tab-button[aria-selected=true] {
+    border-bottom: 3px solid #fdd835;
+}
+
+.fix-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%; // margin-left: -1.2em;
+    .button-md,
+    .button-ios {
+        margin: 0rem 0rem;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff!important;
+}
+
+.swiper-pagination-bullet {
+    background: #ffffff!important;
+}
+
+.item-md h2 {
+    font-size: 2rem;
+}
+
+.item-md h3 {
+    font-size: 1.7rem;
+}
+
+.bg-content {
+    background: #ffffff;
+    margin-bottom: 1em;
+}
+
+.img-thumb {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    #img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: none;
+    }
+}
+.img-thumb-big {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    #img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: none;
+    }
+}
+.title-thumb {
+    height: 80px;
+    max-height: 80px;
+    margin-top: -1em;
+}
+.scroll-content {
+    background: #efefef;
+}
+.label-list {
+    color: #a3a3a3;
+    margin-bottom: 5px;
+}
+.end-card {
+    margin-bottom: 5em;
+}
+ion-app.md [padding] .scroll-content, ion-app.ios [padding] .scroll-content {
+    padding: 0px!important;
+}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: none!important;
+    -webkit-box-shadow: inset 0 0px 0 0 none!important;
+    box-shadow: inset 0 0px 0 0 none!important;
+}
+.text-center {
+    text-align: center;
+}
+.avatar img {
+    border-radius: 50%;
+}

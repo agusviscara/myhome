@@ -1,0 +1,101 @@
+<!--
+  Generated template for the SearchViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title *ngIf="item == 'property'">Property</ion-title>
+    <ion-title *ngIf="item == 'furnitur'">Furnitur</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-grid no-padding *ngIf="item == 'property'">
+    <ion-row>
+      <ion-col col-6 no-padding *ngFor="let item of propertyData">
+        <a (click)="openNavDetailsPage(item)">
+          <ion-card no-padding>
+            <div class="img-card">
+              <img src="{{item.image[0].file}}" />
+            </div>
+            <div class="card-text">
+              <ion-row class="title">
+                <h4 ion-text>
+                  {{item.title}}
+                </h4>
+              </ion-row>
+              <ion-row class="location">
+                <ion-col col-2 no-padding>
+                  <ion-icon name="pin">&nbsp;</ion-icon>
+                </ion-col>
+                <ion-col col-10 no-padding class="name">{{item.lokasi}}</ion-col>
+              </ion-row>
+              <ion-row class="price">
+                <ion-col col-2 no-padding class="rp">Rp</ion-col>
+                <ion-col col-10 no-padding>{{item.harga | number}}</ion-col>
+              </ion-row>
+            </div>
+          </ion-card>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="item == 'furnitur'" no-padding>
+    <ion-row>
+      <ion-col col-12 no-padding *ngFor="let item of furniturData">
+        <a>
+          <ion-card no-padding>
+            <div class="img-card-big">
+              <ion-slides pager="true">
+                <ion-slide style="background-color: grey" *ngFor="let a of item.image">
+                  <img src="{{a.file}}" />
+                </ion-slide>
+              </ion-slides>
+            </div>
+            <div class="card-text">
+              <ion-row class="title-big">
+                <ion-col col-10 no-padding>
+                  <a (click)="openNavDetailsPage(item)">
+                    <h3 ion-text>
+                      {{item.title}}
+                    </h3>
+                  </a>
+                </ion-col>
+                <ion-col col-2 no-padding>
+                  <button ion-fab mini mode="md" color="secondary" (click)="like(iconLike)">
+                    <ion-icon name="{{iconLike}}"></ion-icon>
+                  </button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-12 no-padding>
+                  <rating [(ngModel)]="starMeter" [max]="5" [readonly]="true"></rating>
+                </ion-col>
+              </ion-row>
+              <ion-row class="location">
+                <ion-col col-1 no-padding>
+                  <ion-icon name="pin">&nbsp;</ion-icon>
+                </ion-col>
+                <ion-col col-11 no-padding>{{item.lokasi}}</ion-col>
+              </ion-row>
+              <ion-row class="price">
+                <ion-col col-1 no-padding class="rp-big">Rp</ion-col>
+                <ion-col col-6 no-padding>{{item.harga | number}}</ion-col>
+                <ion-col col-5 no-padding class="date">
+                  <ion-icon name="time">&nbsp;</ion-icon>{{item.date}}</ion-col>
+              </ion-row>
+            </div>
+          </ion-card>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

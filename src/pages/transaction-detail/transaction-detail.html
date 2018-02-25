@@ -1,0 +1,68 @@
+<!--
+  Generated template for the TransactionDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Transaksi Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="bg-content" no-padding>
+    <ion-list>
+      <button ion-item (click)="openNavDetailsPage(item)">
+        <div class="img-thumb" item-start>
+          <img id="img" src="{{item.image[0].file}}">
+        </div>
+        <h3>{{item.title}}</h3>
+        <h3>Rp
+          <b>{{item.harga | number}}</b>
+        </h3>
+        <!-- <h5 ion-text color="primary">{{item.status}} - {{item.date}}</h5> -->
+      </button>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-note>Nomor Tagihan</ion-note>
+        <h5 item-end>RMHGH5556565</h5>
+      </ion-item>
+      <ion-item>
+        <ion-note>Status</ion-note>
+        <h5 item-end>{{item.status}}</h5>
+      </ion-item>
+      <button ion-item (click)="detailHarga(viewHarga)">
+        <ion-note>Total Harga</ion-note>
+        <h5 item-end>{{item.totalHarga | number}}</h5>
+        <ion-icon item-end name="{{viewHargaIcon}}"></ion-icon>
+      </button>
+      <div *ngIf="viewHarga=='show'" class="grey-bg">
+        <ion-item>
+          <ion-note>Harga Barang</ion-note>
+          <h5 item-end>3,500,000</h5>
+        </ion-item>
+        <ion-item>
+          <ion-note>Ongkos Kirim</ion-note>
+          <h5 item-end>500,000</h5>
+        </ion-item>
+        <ion-item>
+          <ion-note>Biaya Layanan</ion-note>
+          <h5 item-end>700</h5>
+        </ion-item>
+      </div>
+      <ion-item>
+        <ion-note>Metode Pembayaran</ion-note>
+        <h5 item-end>Transfer</h5>
+      </ion-item>
+      <ion-item>
+        <ion-note>Alamat</ion-note>
+        <p>Jl Mawar Merah No. 72 Kavling 702 Kebagusan, Jakarta Selatan</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

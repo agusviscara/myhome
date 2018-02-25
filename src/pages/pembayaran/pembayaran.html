@@ -1,0 +1,174 @@
+<!--
+  Generated template for the PembayaranPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Pembayaran</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <div class="bg-content">
+    <ion-grid no-padding>
+      <ion-item mode="md" no-lines>
+        <h2 ion-text color="dark">Pemesanan</h2>
+      </ion-item>
+    </ion-grid>
+    <ion-grid padding>
+      <ion-row>
+        <ion-col col-4>
+          <div class="img-thumb">
+            <img id="img" src="{{item.image[0].file}}">
+          </div>
+        </ion-col>
+        <ion-col col-8 class="title-thumb">
+          <p ion-text>
+            {{item.title}}
+          </p>
+          <p class="kategori" ion-text color="lowdark">{{item.kategori}}</p>
+          <rating [(ngModel)]="starMeter" [max]="5" [readonly]="true"></rating>
+        </ion-col>
+      </ion-row>
+      <ion-list no-border no-padding mode="md" class="">
+        <ion-item no-padding>
+          Total Barang
+          <div item-end>1</div>
+        </ion-item>
+        <ion-col col-12>
+          <div class="label-list">Catatan</div>
+          <div class="content-list">
+            Warna merah kirim hari weekend
+          </div>
+        </ion-col>
+        <ion-row class="new-address" no-padding>
+          <ion-col col-10>
+            <div padding-top ion-label>Alamat Pengiriman</div>
+          </ion-col>
+          <ion-col col-2>
+            <div padding-top float-right>
+              <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-grid>
+  </div>
+
+  <div class="bg-content">
+    <ion-grid no-padding>
+      <ion-item mode="md" no-lines>
+        <h2 ion-text color="dark">Metode Pembayaran</h2>
+      </ion-item>
+    </ion-grid>
+
+    <ion-list radio-group [(ngModel)]="payment">
+
+      <ion-item>
+        <ion-label>Transfer Bank</ion-label>
+        <ion-radio value="transfer"></ion-radio>
+      </ion-item>
+      <ion-grid no-padding *ngIf="payment == 'transfer'">
+        <ion-row padding class="bank-logo">
+          <ion-col col-3>
+            <img src="./assets/imgs/BCA_logo.svg.png">
+          </ion-col>
+          <ion-col col-3>
+            <img src="./assets/imgs/Logo-Bank-Mandiri.png">
+          </ion-col>
+          <ion-col col-3>
+            <img src="./assets/imgs/BNI-logo.jpg">
+          </ion-col>
+          <ion-col col-3>
+            <img src="./assets/imgs/Logo-Bank-CIMB-Niaga.jpg">
+          </ion-col>
+          <ion-col>
+            <ul>
+              <li>Total belanja anda belum termasuk kode pembayaran</li>
+              <li>Transaksi dengan menggunakan metode pembayaran transfer akan ditambahkan kode pembayaran</li>
+              <li>Pembayaran dengan angka yang tidak tepat akan menyebabkan verifikasi pembayaran menjadi terhambat
+              </li>
+            </ul>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <ion-label>Kartu Kredit</ion-label>
+        <ion-radio value="kartuKredit"></ion-radio>
+      </ion-item>
+
+      <ion-grid no-padding *ngIf="payment == 'kartuKredit'">
+        <ion-row padding class="bank-logo no-margin">
+          <ion-col col-4>
+            <img src="./assets/imgs/visa-mastercard_logo.png">
+          </ion-col>
+        </ion-row>
+        <ion-item>
+          <ion-label floating>No Kartu Kredit</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-row margin-bottom>
+          <ion-col col-2>
+            <ion-item>
+              <ion-label floating>dd</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-2>
+            <ion-item>
+              <ion-label floating>mm</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-3>
+            <ion-item>
+              <ion-label floating>CCV</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+  </div>
+
+  <div class="bg-content end-card">
+    <ion-grid no-padding>
+      <ion-item mode="md" no-lines>
+        <h2 ion-text color="dark">Ringkasan</h2>
+      </ion-item>
+    </ion-grid>
+    <ion-grid padding-horizontal>
+      <ion-list no-border no-padding>
+        <ion-item no-padding>
+          Harga Barang
+          <div item-end>Rp 3,500,000</div>
+        </ion-item>
+        <ion-item no-padding>
+          Ongkos Kirim
+          <div item-end>Rp 500,000</div>
+        </ion-item>
+        <ion-item no-padding>
+          Biaya Layanan
+          <div item-end>Rp 700</div>
+        </ion-item>
+        <ion-item no-padding>
+          Total
+          <div item-end>Rp 4,000,700</div>
+        </ion-item>
+      </ion-list>
+    </ion-grid>
+  </div>
+
+  <div class="fix-bottom">
+    <button ion-button color="primary" full large (click)="bayar()">BAYAR</button>
+  </div>
+
+</ion-content>

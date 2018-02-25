@@ -1,0 +1,11 @@
+page-signin {
+    .primary {
+        background-color: #4caf50;
+    }
+    .image-signin {
+        text-align: center;
+    }
+    .header-md::after {
+        background-image: url(./assets/imgs/home.png)!important;
+    }
+}

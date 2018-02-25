@@ -1,0 +1,22 @@
+page-transaction-detail {
+    ion-label {
+        white-space: unset;
+        h3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 1.2em;
+        }
+        p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            line-height: 1.2em;
+        }
+    }
+    .grey-bg ion-item {
+        background: #f3f3f3;
+    }
+}

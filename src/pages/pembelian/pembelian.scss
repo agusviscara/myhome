@@ -1,0 +1,38 @@
+page-pembelian {
+    .star-icon {
+        font-size: 1.5rem!important;
+    }
+    .kategori {
+        margin-top: -10px;
+        margin-bottom: 0px;
+    }
+    .total-barang {
+        width: 35px;
+        height: 35px;
+        border: solid 1px #fdd835;
+        margin-right: 0px!important;
+        background: #fff9e0;
+        text-align: center;
+    }
+    .item-md .item-button, .item-ios .item-button {
+        padding: 0 0.6em;
+        height: 35px;
+        width: 35px;
+        font-size: 1.2rem;
+    }
+    .item-md .item-button[icon-only], .item-ios .item-button[icon-only] {
+        padding: 0 5px;
+    }
+    .min-plus {
+        border-radius: 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-right: 0px!important;
+    }
+    .new-address {
+        border-top: 1px solid #dedede;font-size:1.2em;
+    }
+    .list-md {
+        margin: -1px 0 10px;
+    }
+}

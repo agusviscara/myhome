@@ -1,0 +1,67 @@
+<!--
+  Generated template for the OtpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Verifikasi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="bg-content">
+    <ion-grid>
+      <ion-row padding-vertical>
+        <ion-col col-12>
+          <h5 ion-text color="dark">Masukan kode verifikasi yang telah dikirimkan ke handphone anda</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3 text-center>
+          <ion-item>
+            <ion-label stacked></ion-label>
+            <ion-input type="tel" maxlength="1" focuser></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <ion-item>
+            <ion-label stacked></ion-label>
+            <ion-input type="tel" maxlength="1"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <ion-item>
+            <ion-label stacked></ion-label>
+            <ion-input type="tel" maxlength="1"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <ion-item>
+            <ion-label stacked></ion-label>
+            <ion-input type="tel" maxlength="1"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <h6 ion-text text-center color="dark">Tidak menerima SMS ?</h6>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button color="primary" clear block round>KIRIM ULANG</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="fix-bottom">
+    <button ion-button color="secondary" full large (click)="showPrompt()">KIRIM</button>
+  </div>
+</ion-content>

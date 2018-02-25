@@ -1,0 +1,43 @@
+page-home {
+    .tabs-ios .tab-button.icon-only {
+        /* min-height: 41px; */
+        /* border-radius: 51%; */
+        background-color: #4caf50;
+        min-height: 50px;
+        margin-right: 1.7em;
+        margin-left: 1.7em;
+    }
+    .tabs-md .tab-button.icon-only {
+        /* min-height: 41px; */
+        /* border-radius: 51%; */
+        background-color: #fdd835;
+        min-height: 4em;
+        max-width: 6em;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    .tabs-ios .tab-button.icon-only ion-icon {
+        color: #ffffff!important;
+        height: 35px;
+        font-size: 35px;
+        margin-top: 0px;
+    }
+    .tabs-md .tab-button.icon-only ion-icon {
+        color: #ffffff!important;
+        height: 35px;
+        font-size: 35px;
+        margin-top: 0px;
+    }
+    .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+        //color: #ffffff!important;
+    }
+    .tabs-ios .tab-button[aria-selected=true] {
+
+    }
+
+    .badge-md-secondary {
+        color: #ffffff!important;
+    }
+    
+}
+

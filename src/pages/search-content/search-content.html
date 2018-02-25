@@ -1,0 +1,112 @@
+<!--
+  Generated template for the SearchPropertyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <!-- <ion-navbar>
+    <ion-title>/search/property</ion-title>
+  </ion-navbar> -->
+</ion-header>
+
+<ion-content no-padding>
+  <div class="bg-content end-card">
+    <div>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Kata kunci</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Lokasi</ion-label>
+          <ion-input type="text" (ionFocus)="searchLocation()"></ion-input>
+        </ion-item>
+        <ion-item no-lines class="filter" mode="md">
+          <h3 ion-text>Filter</h3>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tipe</ion-label>
+          <ion-select [(ngModel)]="tipe" interface="action-sheet">
+            <ion-option value="Komersil">Komersil</ion-option>
+            <ion-option value="Residen">Residen</ion-option>
+            <ion-option value="Subsidi">Subsidi</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item no-lines class="filter" mode="md">
+          <h3 ion-text>Harga (Rp)</h3>
+        </ion-item>
+
+        <ion-item style="width:50%" mode="md">
+          <ion-label stacked>Minimal</ion-label>
+          <ion-select [(ngModel)]="minimal" interface="action-sheet">
+            <ion-option value="100.000.000">100.000.000</ion-option>
+            <ion-option value="200.000.000">200.000.000</ion-option>
+            <ion-option value="300.000.000">300.000.000</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="select-right">
+          <ion-label stacked>Maksimal</ion-label>
+          <ion-select [(ngModel)]="maksimal" interface="action-sheet">
+            <ion-option value="1.000.000.000">1.000.000.000</ion-option>
+            <ion-option value="2.000.000.000">2.000.000.000</ion-option>
+            <ion-option value="3.000.000.000">3.000.000.000</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <div *ngIf="dataTabs == 'property'">
+          <ion-item no-lines class="filter" mode="md">
+            <h3 ion-text>Luas Bangunan (m)</h3>
+          </ion-item>
+          <ion-item style="width:50%" mode="md">
+            <ion-label stacked>Minimal</ion-label>
+            <ion-select [(ngModel)]="lbMinimal" interface="action-sheet">
+              <ion-option value="30">30</ion-option>
+              <ion-option value="40">40</ion-option>
+              <ion-option value="50">50</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="select-right" mode="md">
+            <ion-label stacked>Maksimal</ion-label>
+            <ion-select [(ngModel)]="lbMaksimal" interface="action-sheet">
+              <ion-option value="70">70</ion-option>
+              <ion-option value="80">80</ion-option>
+              <ion-option value="100">100</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+        <div *ngIf="dataTabs == 'property'">
+          <ion-item no-lines class="filter" mode="md">
+            <h3 ion-text>Luas Tanah (m)</h3>
+          </ion-item>
+          <ion-item style="width:50%" mode="md">
+            <ion-label stacked>Minimal</ion-label>
+            <ion-select [(ngModel)]="ltMinimal" interface="action-sheet">
+              <ion-option value="30">30</ion-option>
+              <ion-option value="40">40</ion-option>
+              <ion-option value="50">50</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="select-right" mode="md">
+            <ion-label stacked>Maksimal</ion-label>
+            <ion-select [(ngModel)]="ltMaksimal" interface="action-sheet">
+              <ion-option value="70">70</ion-option>
+              <ion-option value="80">80</ion-option>
+              <ion-option value="100">100</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+
+  <div class="fix-bottom" *ngIf="dataTabs == 'property'">
+    <button ion-button (click)="searchProperty()" color="primary" full large>CARI</button>
+  </div>
+
+  <div class="fix-bottom" *ngIf="dataTabs == 'furnitur'">
+      <button ion-button (click)="searchFurnitur()" color="primary" full large>CARI</button>
+    </div>
+
+</ion-content>

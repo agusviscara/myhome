@@ -1,0 +1,25 @@
+<ion-content class="tutorial-page" padding>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slider">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button (click)="goToSlide()" color="primary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image" />
+      <h1 class="slide-title" [innerHTML]="slide.title"></h1>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide id="end-slide">
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/imgs/login.png" class="slide-image" />
+      <h1 class="slide-title">Yuk login atau daftar untuk mengetahui lebih jauh</h1>
+      <button [navPush]="pushPage" ion-button medium round large icon-end color="secondary">
+        Masuk
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

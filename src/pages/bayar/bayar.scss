@@ -1,0 +1,19 @@
+    page-bayar {
+    .alert-transfer {
+        text-align: center;
+        background-color: #fff2da;
+        border-radius: 10px;
+        padding: 1px 20px;
+        color: #8c7201,
+    }
+    .item-md ion-thumbnail img,
+    .item-ios ion-thumbnail img {
+        width: 63px!important;
+        height: auto
+    }
+    .item-md ion-thumbnail, .item-ios ion-thumbnail  {
+        min-width: 80px;
+        min-height: 0px!important;
+        padding: 0px;
+    }
+}
