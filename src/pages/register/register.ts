@@ -8,8 +8,6 @@ import { IonicPage, NavController, NavParams,App } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
- import { OtpPage } from '../otp/otp';
-
 @IonicPage()
 @Component({
   selector: 'page-register',
@@ -40,7 +38,7 @@ export class RegisterPage {
   openPage() {
     let nav = [];
     nav = this.app.getRootNavs();
-    nav[0].push(OtpPage, { animate: true, direction: 'forward' });
+    nav[0].push('OtpPage', { animate: true, direction: 'forward' });
   }
 
 }

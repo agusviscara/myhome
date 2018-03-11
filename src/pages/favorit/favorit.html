@@ -16,13 +16,21 @@
 <ion-content no-padding>
   <div class="bg-content" no-padding>
     <ion-list>
-      <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)">
-        <div class="img-thumb" item-start>
-          <img id="img" src="{{item.image[0].file}}">
-        </div>
-        <h3>{{item.title}}</h3>
-        <p>{{item.kategori}}</p>
-      </button>
+      <ion-item-sliding *ngFor="let item of items">
+        <button ion-item (click)="openNavDetailsPage(item)">
+          <div class="img-thumb" item-start>
+            <img id="img" src="{{item.image[0].file}}">
+          </div>
+          <h3>{{item.title}}</h3>
+          <p>{{item.kategori}}</p>
+        </button>
+        <ion-item-options side="right">
+          <button ion-button color="danger">
+            <ion-icon name="trash"></ion-icon>
+            REMOVE
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
     </ion-list>
   </div>
 </ion-content>

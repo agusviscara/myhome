@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
-// import { IonicPageModule } from 'ionic-angular';
-
-//page
-// import { OnboardingPage } from './onboarding';
+import { IonicPageModule } from 'ionic-angular';
+import { OnboardingPage } from './onboarding';
 
 @NgModule({
   declarations: [
-    // OnboardingPage
+    OnboardingPage
   ],
   imports: [
-    // IonicPageModule.forChild(OnboardingPage)
+    IonicPageModule.forChild(OnboardingPage)
   ],
   entryComponents: [
     

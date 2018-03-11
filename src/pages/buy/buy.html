@@ -14,7 +14,7 @@
         <ion-icon name="search"></ion-icon>
       </button>
       <button ion-button icon-right color="light">
-        
+
         <ion-icon name="cart"></ion-icon>
         <!-- <ion-badge item-end color="secondary">26</ion-badge> -->
       </button>
@@ -126,10 +126,10 @@
     <ion-grid *ngSwitchCase="'Residen'" no-padding>
       <ion-row>
         <ion-col col-6 no-padding *ngFor="let item of items">
-          <a>
+          <a (click)="openNavDetailsPage(item)">
             <ion-card no-padding>
               <div class="img-card">
-                <img src="{{item.image}}" />
+                <img src="{{item.image[0].file}}" />
               </div>
               <div class="card-text">
                 <ion-row class="title">
@@ -141,7 +141,7 @@
                   <ion-col col-2 no-padding>
                     <ion-icon name="pin">&nbsp;</ion-icon>
                   </ion-col>
-                  <ion-col col-10 no-padding>{{item.lokasi}}</ion-col>
+                  <ion-col col-10 no-padding class="name">{{item.lokasi}}</ion-col>
                 </ion-row>
                 <ion-row class="price">
                   <ion-col col-2 no-padding class="rp">Rp</ion-col>

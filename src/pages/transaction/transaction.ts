@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TransactionDetailPage } from '../transaction-detail/transaction-detail';
+// import { TransactionDetailPage } from '../transaction-detail/transaction-detail';
 
 /**
  * Generated class for the TransactionPage page.
@@ -69,7 +69,7 @@ export class TransactionPage {
   }
 
   transactionDetail(item) {
-    this.navCtrl.push(TransactionDetailPage, {item : item} );
+    this.navCtrl.push('TransactionDetailPage', {item : item} );
   }
 
 }

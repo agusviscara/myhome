@@ -9,8 +9,6 @@ import { AlertController } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
- import { HomePage } from '../home/home'
-
 @IonicPage()
 @Component({
   selector: 'page-otp',
@@ -23,7 +21,7 @@ export class OtpPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OtpPage');
+    
   }
 
   showPrompt() {
@@ -43,9 +41,11 @@ export class OtpPage {
   }
 
   openPage() {
-    let nav = [];
-    nav = this.app.getRootNavs();
-    nav[0].setRoot(HomePage);
+    // let nav = [];
+    // nav = this.app.getRootNavs();
+    // nav[0].setRoot('HomePage');
+
+    this.app.getRootNavs()[0].setRoot('HomePage');
   }
 
 }

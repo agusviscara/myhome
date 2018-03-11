@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
-// import { IonicPageModule } from 'ionic-angular';
-// import { BuyPage } from './buy';
+import { IonicPageModule } from 'ionic-angular';
+import { BuyPage } from './buy';
 
 // https://github.com/pleerock/ngx-rating
-// import { RatingModule } from "ngx-rating";
+import { RatingModule } from "ngx-rating";
 
 @NgModule({
   declarations: [
-    // BuyPage,
+    BuyPage,
   ],
   imports: [
-    // RatingModule,
-    // IonicPageModule.forChild(BuyPage),
+    RatingModule,
+    IonicPageModule.forChild(BuyPage),
   ],
-  providers: []
+  providers: [],
+  entryComponents: [
+    BuyPage
+  ]
 })
 export class BuyPageModule { }

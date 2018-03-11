@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BayarPage } from '../bayar/bayar';
 
 /**
  * Generated class for the PembayaranPage page.
@@ -52,7 +51,11 @@ export class PembayaranPage {
   // }
 
   bayar() {
-    this.navCtrl.push(BayarPage);
+    this.navCtrl.push('BayarPage');
+  }
+
+  alamat() {
+    this.navCtrl.push('AlamatPage');
   }
 
 }

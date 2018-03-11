@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams, App, ActionSheetController } from 
 
 declare var google;
 import { Geolocation } from '@ionic-native/geolocation';
-import { BuyDetailPage } from '../buy-detail/buy-detail';
 
 /**
  * Generated class for the NearbyPage page.
@@ -139,7 +138,7 @@ export class NearbyPage {
 
   openNavDetailsPage(item) {
     // this navigation for outside tab component
-    this.appCtrl.getRootNav().push(BuyDetailPage, { item: item });
+    this.appCtrl.getRootNav().push('BuyDetailPage', { item: item });
   }
 
   filter() {

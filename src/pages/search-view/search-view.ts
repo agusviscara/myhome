@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BuyDetailPage } from '../buy-detail/buy-detail';
+// import { BuyDetailPage } from '../buy-detail/buy-detail';
 
 /**
  * Generated class for the SearchViewPage page.
@@ -190,7 +190,7 @@ export class SearchViewPage {
   }
 
   openNavDetailsPage(item) {
-    this.navCtrl.push(BuyDetailPage, { item: item });
+    this.navCtrl.push('BuyDetailPage', { item: item });
   }
 
 }

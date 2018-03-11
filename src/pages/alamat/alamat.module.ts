@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { BandingkanPage } from './bandingkan';
+import { AlamatPage } from './alamat';
 
 @NgModule({
   declarations: [
-    BandingkanPage,
+    AlamatPage,
   ],
   imports: [
-    IonicPageModule.forChild(BandingkanPage),
+    IonicPageModule.forChild(AlamatPage),
   ],
   entryComponents: [
-    BandingkanPage
+    AlamatPage
   ]
 })
-export class BandingkanPageModule {}
+export class AlamatPageModule {}

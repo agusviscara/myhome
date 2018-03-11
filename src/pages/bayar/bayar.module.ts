@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
-// import { IonicPageModule } from 'ionic-angular';
-// import { BayarPage } from './bayar';
+import { IonicPageModule } from 'ionic-angular';
+import { BayarPage } from './bayar';
 
 @NgModule({
   declarations: [
-    // BayarPage,
+    BayarPage,
   ],
   imports: [
-    // IonicPageModule.forChild(BayarPage),
+    IonicPageModule.forChild(BayarPage),
   ],
+  entryComponents: [
+    BayarPage
+  ]
 })
 export class BayarPageModule {}

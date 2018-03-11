@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, App } from 'ionic-angular';
-import { EditProfilePage } from '../edit-profile/edit-profile';
-import { FavoritPage } from '../favorit/favorit';
-import { TransactionPage } from '../transaction/transaction';
-import { OnboardingPage } from '../onboarding/onboarding';
-import { BandingkanPage } from '../bandingkan/bandingkan';
+// import { EditProfilePage } from '../edit-profile/edit-profile';
+// import { FavoritPage } from '../favorit/favorit';
+// import { TransactionPage } from '../transaction/transaction';
+// import { OnboardingPage } from '../onboarding/onboarding';
+// import { BandingkanPage } from '../bandingkan/bandingkan';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -28,7 +28,7 @@ export class ProfilePage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
-    private appCtrl: App
+    public appCtrl: App
   ) {
 
     this.items = [
@@ -68,25 +68,25 @@ export class ProfilePage {
   }
 
   openEditPage(item) {
-    let modal = this.modalCtrl.create(EditProfilePage, { item: item });
+    let modal = this.modalCtrl.create('EditProfilePage', { item: item });
     modal.present();
   }
 
   favorit() {
-    this.navCtrl.push(FavoritPage);
+    this.navCtrl.push('FavoritPage');
   }
 
   bandingkan() {
-    this.navCtrl.push(BandingkanPage);
+    this.navCtrl.push('BandingkanPage');
   }
 
   transaction() {
-    this.navCtrl.push(TransactionPage);
+    this.navCtrl.push('TransactionPage');
   }
 
   logout() {
     // this navigation for outside tab component
-    this.appCtrl.getRootNav().push(OnboardingPage);
+    this.appCtrl.getRootNavs()[0].setRoot('OnboardingPage');
   }
 
 }

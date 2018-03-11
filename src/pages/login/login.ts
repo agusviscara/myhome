@@ -8,8 +8,6 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-import { ForgotPasswordPage } from '../forgot-password/forgot-password';
-
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -39,7 +37,7 @@ export class LoginPage {
   openPage() {
     let nav = [];
     nav = this.app.getRootNavs();
-    nav[0].push(ForgotPasswordPage, { animate: true, direction: 'forward' });
+    nav[0].push('ForgotPasswordPage', { animate: true, direction: 'forward' });
   }
 
   // This app getRootNav() will be deprecated

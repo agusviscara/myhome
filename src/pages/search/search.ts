@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
-import { SearchContentPage } from '../search-content/search-content';
+// import { SearchContentPage } from '../search-content/search-content';
 
 /**
  * Generated class for the SearchPage page.
@@ -17,20 +17,28 @@ import { SearchContentPage } from '../search-content/search-content';
 })
 export class SearchPage {
 
-  searchContent: any;
-  propertyData: any;
-  furniturData: any;
+  search: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-    this.searchContent = SearchContentPage;
-    this.propertyData = 'property';
-    this.furniturData = 'furnitur';
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+    this.search = 'property';
   }
 
   ionViewDidLoad() {
-    
+
+  }
+
+  searchLocation() {
+    let modal = this.modalCtrl.create('SearchLocationPage');
+    modal.present();
+  }
+
+  searchContent(search) {
+    if (search === 'property') {
+      this.navCtrl.push('SearchViewPage', { animate: true, direction: 'forward', item: 'property' });
+    }
+    else {
+      this.navCtrl.push('SearchViewPage', { animate: true, direction: 'forward', item: 'furnitur' });
+    }
   }
 
 }

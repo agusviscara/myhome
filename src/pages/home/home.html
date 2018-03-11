@@ -13,11 +13,11 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-tabs> 
-    <ion-tab tabIcon="home" tabTitle="Home" [root]="tabDashboard"></ion-tab>
-    <ion-tab tabIcon="cart" tabTitle="Beli" [root]="tabBuy"></ion-tab>
-    <ion-tab tabIcon="ios-pin" tabTitle="" [root]="tabNearby"></ion-tab>
-    <ion-tab tabIcon="calculator" tabTitle="Hitung" [root]="tabCalculator"></ion-tab>
-    <ion-tab tabIcon="contact" tabTitle="Profil" [root]="tabProfile" tabBadge="18" tabBadgeStyle="secondary"></ion-tab>
+  <ion-tabs selectedIndex="0">
+    <ion-tab tabIcon="home" tabTitle="Home" [root]="tab1Root"></ion-tab>
+    <ion-tab tabIcon="cart" tabTitle="Beli" [root]="tab2Root"></ion-tab>
+    <ion-tab tabIcon="ios-pin" tabTitle="Nearby" [root]="tab3Root"></ion-tab>
+    <ion-tab tabIcon="calculator" tabTitle="Hitung" [root]="tab4Root"></ion-tab>
+    <ion-tab tabIcon="contact" tabTitle="Profil" [root]="tab5Root" tabBadge="12" tabBadgeStyle="secondary"></ion-tab>
   </ion-tabs>
 </ion-content>

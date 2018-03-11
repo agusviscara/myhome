@@ -4,10 +4,6 @@ import { IonicPage, NavController, NavParams, ActionSheetController } from 'ioni
 declare var google;
 
 import { Geolocation } from '@ionic-native/geolocation';
-import { KirimPertanyaanPage } from '../kirim-pertanyaan/kirim-pertanyaan';
-import { PembelianPage } from '../pembelian/pembelian';
-import { CalculatorPage } from '../calculator/calculator';
-import { BandingkanPage } from '../bandingkan/bandingkan';
 
 /**
  * Generated class for the BuyDetailPage page.
@@ -170,19 +166,19 @@ export class BuyDetailPage {
   }
 
   kirimPertanyaan() {
-    this.navCtrl.push(KirimPertanyaanPage, { item: this.item });
+    this.navCtrl.push('KirimPertanyaanPage', { item: this.item });
   }
 
   calculator() {
-    this.navCtrl.push(CalculatorPage);
+    this.navCtrl.push('CalculatorPage');
   }
 
   bandingkan() {
-    this.navCtrl.push(BandingkanPage);
+    this.navCtrl.push('BandingkanPage');
   }
 
   beli() {
-    this.navCtrl.push(PembelianPage, { item: this.item });
+    this.navCtrl.push('PembelianPage', { item: this.item });
   }
 
 }

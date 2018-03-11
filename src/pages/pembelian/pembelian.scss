@@ -14,13 +14,15 @@ page-pembelian {
         background: #fff9e0;
         text-align: center;
     }
-    .item-md .item-button, .item-ios .item-button {
+    .item-md .item-button,
+    .item-ios .item-button {
         padding: 0 0.6em;
         height: 35px;
         width: 35px;
         font-size: 1.2rem;
     }
-    .item-md .item-button[icon-only], .item-ios .item-button[icon-only] {
+    .item-md .item-button[icon-only],
+    .item-ios .item-button[icon-only] {
         padding: 0 5px;
     }
     .min-plus {
@@ -30,7 +32,11 @@ page-pembelian {
         margin-right: 0px!important;
     }
     .new-address {
-        border-top: 1px solid #dedede;font-size:1.2em;
+        border-top: 1px solid #dedede;
+        font-size: 1.2em;
+        ion-col button {
+            padding-left: 0px;
+        }
     }
     .list-md {
         margin: -1px 0 10px;

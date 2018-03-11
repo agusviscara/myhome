@@ -1,13 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Slides, App } from 'ionic-angular';
+
 /**
  * Generated class for the OnboardingPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
-import { SigninPage } from '../signin/signin';
 
 @IonicPage()
 @Component({
@@ -36,22 +35,35 @@ export class OnboardingPage {
       image: "assets/imgs/experience.png",
     }
   ];
-  
-  ;
-
-  pushPage: any;
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams
+    public navParams: NavParams,
+    public app: App
   ) {
-    this.pushPage = SigninPage;
+    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OnboardingPage');
+    
   }
   goToSlide() {
     this.slides.slideTo(3, 500);
   }
+
+  // goToLogin() {    
+  //   this.navCtrl.setRoot('SigninPage');
+  // }
+
+  // goToLogin() {
+  //   // this navigation for outside tab component
+  //   this.appCtrl.getRootNav().push('SigninPage');
+  // }
+
+  goToLogin() {
+    let nav = [];
+    nav = this.app.getRootNavs();
+    nav[0].push('SigninPage', { animate: true, direction: 'forward' });
+  }
+
 }

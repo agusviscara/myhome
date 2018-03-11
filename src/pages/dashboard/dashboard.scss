@@ -49,36 +49,43 @@ page-dashboard {
         width: 100%;
         color: #fff;
     }
-    
     @media (min-width: 318px) and (max-width: 322px) {
         .card-row {
-            width: 6.8em;
+            width: 8.8em;
+            margin: 0px;
         }
         .card-title {
-            top: 60%;
+            top: 70%;
         }
     }
     @media (min-width: 358px) and (max-width: 362px) {
         .card-row {
-            width: 8em;
+            width: 10em;
+            margin: 0px;
         }
     }
     @media (min-width: 373px) and (max-width: 377px) {
         .card-row {
-            width: 8em;
+            width: 10em;
+            margin: 0px;
         }
     }
     @media (min-width: 382px) and (max-width: 386px) {
         .card-row {
-            width: 8em;
+            width: 10em;
+            margin: 0px;
         }
     }
     @media (min-width: 408px) and (max-width: 416px) {
         .card-row {
-            width: 9em;
+            width: 11em;
+            margin: 0px;
         }
     }
     .row-slider {
-      margin-top: -1em;
+        margin-top: -1em;
+    }
+    .slide-width-end {
+        width: 200.333px!important;
     }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
-import { BuyDetailPage } from '../buy-detail/buy-detail';
+// import { BuyDetailPage } from '../buy-detail/buy-detail';
 
 /**
  * Generated class for the TransactionDetailPage page.
@@ -39,7 +39,7 @@ export class TransactionDetailPage {
 
   openNavDetailsPage(item) {
     // this navigation for outside tab component
-    this.appCtrl.getRootNav().push(BuyDetailPage, { item: item });
+    this.appCtrl.getRootNav().push('BuyDetailPage', { item: item });
   }
 
 }

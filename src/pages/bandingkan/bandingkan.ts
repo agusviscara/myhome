@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SearchViewPage } from '../search-view/search-view';
 
 /**
  * Generated class for the BandingkanPage page.
@@ -24,7 +23,7 @@ export class BandingkanPage {
   }
 
   search() {
-    this.navCtrl.push(SearchViewPage, { item: 'property' });
+    this.navCtrl.push('SearchViewPage', { item: 'property' });
   }
 
 }

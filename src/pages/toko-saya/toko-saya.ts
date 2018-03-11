@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-// import { RegisterPage } from '../register/register';
-// import { LoginPage } from '../login/login';
-
 /**
- * Generated class for the SigninPage page.
+ * Generated class for the TokoSayaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,17 +10,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-signin',
-  templateUrl: 'signin.html',
+  selector: 'page-toko-saya',
+  templateUrl: 'toko-saya.html',
 })
-export class SigninPage {
-
-  login: any;
-  register: any;
+export class TokoSayaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.login = 'LoginPage';
-    this.register = 'RegisterPage';
   }
 
   ionViewDidLoad() {

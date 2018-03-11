@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, App  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { DecimalPipe } from '@angular/common';
-import { BuyDetailPage } from '../buy-detail/buy-detail';
-import { SearchPage } from '../search/search';
 
 /**
  * Generated class for the BuyPage page.
@@ -11,7 +9,7 @@ import { SearchPage } from '../search/search';
  * Ionic pages and navigation.
  */
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: 'page-buy',
   templateUrl: 'buy.html',
@@ -29,7 +27,7 @@ export class BuyPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public decimalPipe: DecimalPipe,
-    private appCtrl : App
+    private appCtrl: App
   ) {
 
     this.kategori = "Komersil";
@@ -250,12 +248,11 @@ export class BuyPage {
 
   openNavDetailsPage(item) {
     // this navigation for outside tab component
-    this.appCtrl.getRootNav().push(BuyDetailPage, { item: item });
+    this.appCtrl.getRootNav().push('BuyDetailPage', { item: item });
   }
 
   search() {
-    // this navigation for outside tab component
-    this.appCtrl.getRootNav().push(SearchPage);
+     this.appCtrl.getRootNav().push('SearchPage');
   }
 
 }

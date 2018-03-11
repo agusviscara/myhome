@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
-import { BuyDetailPage } from '../buy-detail/buy-detail';
 
 /**
  * Generated class for the FavoritPage page.
@@ -94,7 +93,7 @@ export class FavoritPage {
 
   openNavDetailsPage(item) {
     // this navigation for outside tab component
-    this.appCtrl.getRootNav().push(BuyDetailPage, { item: item });
+    this.appCtrl.getRootNav().push('BuyDetailPage', { item: item });
   }
 
 }
