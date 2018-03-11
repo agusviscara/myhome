@@ -51,19 +51,4 @@ export class OnboardingPage {
     this.slides.slideTo(3, 500);
   }
 
-  // goToLogin() {    
-  //   this.navCtrl.setRoot('SigninPage');
-  // }
-
-  // goToLogin() {
-  //   // this navigation for outside tab component
-  //   this.appCtrl.getRootNav().push('SigninPage');
-  // }
-
-  goToLogin() {
-    let nav = [];
-    nav = this.app.getRootNavs();
-    nav[0].push('SigninPage', { animate: true, direction: 'forward' });
-  }
-
 }

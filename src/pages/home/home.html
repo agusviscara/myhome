@@ -14,10 +14,10 @@
 
 <ion-content padding>
   <ion-tabs selectedIndex="0">
-    <ion-tab tabIcon="home" tabTitle="Home" [root]="tab1Root"></ion-tab>
-    <ion-tab tabIcon="cart" tabTitle="Beli" [root]="tab2Root"></ion-tab>
-    <ion-tab tabIcon="ios-pin" tabTitle="Nearby" [root]="tab3Root"></ion-tab>
-    <ion-tab tabIcon="calculator" tabTitle="Hitung" [root]="tab4Root"></ion-tab>
-    <ion-tab tabIcon="contact" tabTitle="Profil" [root]="tab5Root" tabBadge="12" tabBadgeStyle="secondary"></ion-tab>
+    <ion-tab tabIcon="home" tabTitle="Home" [root]="tab1Root" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab tabIcon="apps" tabTitle="Kategori" [root]="tab2Root" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab tabIcon="ios-pin" tabTitle="Nearby" class="nearby" [root]="tab3Root" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab tabIcon="calculator" tabTitle="Hitung" [root]="tab4Root" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab tabIcon="contact" tabTitle="Profil" [root]="tab5Root" tabBadge="12" tabBadgeStyle="secondary" tabsHideOnSubPages="true"></ion-tab>
   </ion-tabs>
 </ion-content>

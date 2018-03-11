@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DecimalPipe } from '@angular/common';
 
 /**
@@ -26,8 +26,7 @@ export class BuyPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public decimalPipe: DecimalPipe,
-    private appCtrl: App
+    public decimalPipe: DecimalPipe
   ) {
 
     this.kategori = "Komersil";
@@ -247,12 +246,11 @@ export class BuyPage {
   }
 
   openNavDetailsPage(item) {
-    // this navigation for outside tab component
-    this.appCtrl.getRootNav().push('BuyDetailPage', { item: item });
+    this.navCtrl.push('BuyDetailPage', { item: item });
   }
 
   search() {
-     this.appCtrl.getRootNav().push('SearchPage');
+    this.navCtrl.push('SearchPage');
   }
 
 }

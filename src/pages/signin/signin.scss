@@ -5,7 +5,16 @@ page-signin {
     .image-signin {
         text-align: center;
     }
-    .header-md::after {
-        background-image: url(./assets/imgs/home.png)!important;
+    ion-icon {
+        margin-left: -1em;
+    }
+    ion-segment {
+        background-color: #4caf50;
+        ion-segment-button.segment-button {
+            color: #ffffff!important;
+        }
+    }
+    .segment-activated {
+        border-color: #FDD835!important;
     }
 }

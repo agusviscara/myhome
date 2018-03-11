@@ -41,11 +41,9 @@ export class OtpPage {
   }
 
   openPage() {
-    // let nav = [];
-    // nav = this.app.getRootNavs();
-    // nav[0].setRoot('HomePage');
-
-    this.app.getRootNavs()[0].setRoot('HomePage');
+    let nav = [];
+    nav = this.app.getRootNavs();
+    nav[0].setRoot('HomePage');
   }
 
 }

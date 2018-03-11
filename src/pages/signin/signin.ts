@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-// import { RegisterPage } from '../register/register';
-// import { LoginPage } from '../login/login';
-
 /**
  * Generated class for the SigninPage page.
  *
@@ -18,16 +15,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SigninPage {
 
-  login: any;
-  register: any;
+  signIn : any;
+  show = false;
+  type = "password";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.login = 'LoginPage';
-    this.register = 'RegisterPage';
+    this.signIn = 'login';
   }
 
   ionViewDidLoad() {
     
+  }
+
+  showPassword() {
+    this.show = !this.show;
+    if (this.show) {
+      this.type = "text";
+    }
+    else {
+      this.type = "password";
+    }
+  }
+
+  forgotPassword() {
+    this.navCtrl.push('ForgotPasswordPage');
+  }
+
+  otp() {
+    this.navCtrl.push('OtpPage');
   }
 
 }

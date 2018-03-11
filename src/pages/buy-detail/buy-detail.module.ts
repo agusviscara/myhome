@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { BuyDetailPage } from './buy-detail';
-
+import { MaterialIconsModule } from 'ionic2-material-icons';
 import { RatingModule } from "ngx-rating";
 
 @NgModule({
@@ -11,6 +11,7 @@ import { RatingModule } from "ngx-rating";
   imports: [
     RatingModule,
     IonicPageModule.forChild(BuyDetailPage),
+    MaterialIconsModule
   ],
   entryComponents: [
     BuyDetailPage

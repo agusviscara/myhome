@@ -12,16 +12,77 @@
     <ion-row>
       <ion-col col-12>
         <div class="image-signin">
-          <img width="150" height="85" src="assets/imgs/signin-logo.png">
+          <img width="120" height="60" src="assets/imgs/signin-logo.png">
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
+  <ion-segment [(ngModel)]="signIn" mode="md">
+    <ion-segment-button value="login">
+      Login
+    </ion-segment-button>
+    <ion-segment-button value="register">
+      Register
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
 <ion-content padding>
-  <ion-tabs tabsPlacement="top" color="primary">
-    <ion-tab tabTitle="MASUK" [root]="login"></ion-tab>
-    <ion-tab tabTitle="DAFTAR" [root]="register"></ion-tab>
-  </ion-tabs>
+  <div class="bg-content end-card">
+    <div [ngSwitch]="signIn">
+      <ion-list *ngSwitchCase="'login'">
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="{{type}}" name="password"></ion-input>
+          <a class="eye" item-right clear (click)="showPassword()">
+            <ion-icon color="dark">
+              <ion-icon name="eye" item-start></ion-icon>
+            </ion-icon>
+          </a>
+        </ion-item>
+        <ion-item no-lines>
+          <button ion-button item-right (click)="forgotPassword()" color="primary" clear>
+            <h4>
+              <b>Lupa Password ?</b>
+            </h4>
+          </button>
+        </ion-item>
+        <ion-item>
+          <button ion-button color="secondary" block round large>MASUK</button>
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'register'">
+        <ion-item>
+          <ion-label floating>Nama</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>No Handphone</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="{{type}}" name="password"></ion-input>
+          <a class="eye" item-right clear (click)="showPassword()">
+            <ion-icon color="dark">
+              <ion-icon name="eye" item-start></ion-icon>
+            </ion-icon>
+          </a>
+        </ion-item>
+        <ion-item>
+          <button ion-button color="secondary" (click)="otp()" block round large>DAFTAR</button>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </div>
 </ion-content>

@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, App } from 'ionic-angular';
-// import { EditProfilePage } from '../edit-profile/edit-profile';
-// import { FavoritPage } from '../favorit/favorit';
-// import { TransactionPage } from '../transaction/transaction';
-// import { OnboardingPage } from '../onboarding/onboarding';
-// import { BandingkanPage } from '../bandingkan/bandingkan';
+
 /**
  * Generated class for the ProfilePage page.
  *
@@ -59,7 +55,6 @@ export class ProfilePage {
         'icon': 'mode_edit'
       }
     ]
-
 
   }
 

@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, App, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 
 declare var google;
 import { Geolocation } from '@ionic-native/geolocation';
@@ -26,7 +26,6 @@ export class NearbyPage {
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public geolocation: Geolocation,
-    private appCtrl : App,
     public actionSheetCtrl: ActionSheetController
   ) {
 
@@ -137,8 +136,7 @@ export class NearbyPage {
   }
 
   openNavDetailsPage(item) {
-    // this navigation for outside tab component
-    this.appCtrl.getRootNav().push('BuyDetailPage', { item: item });
+    this.navCtrl.push('BuyDetailPage', { item: item });
   }
 
   filter() {
